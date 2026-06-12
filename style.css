@@ -28,7 +28,7 @@ h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; }
 .imagen-animada-fondo {
     width: 100%;
     height: 100%;
-    background-image: url('images/banneer.jpeg');
+    background-image: url('images/poster.jpeg');
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat;
     background-size: cover; /* CLAVE: La imagen se expande para llenar todo */
