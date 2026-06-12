@@ -1,0 +1,257 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adidas World Cup Experience 2027</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header class="navbar">
+            <div class="logo">ADIDAS</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">INICIO</a></li>
+                    <li><a href="#objetivos">OBJETIVOS</a></li>
+                    <li><a href="#programa">PROGRAMA</a></li>
+                    <li><a href="#hotel">LUGAR</a></li>
+                    <li><a href="#comites">COMITÉS</a></li>
+                </ul>
+            </nav>
+            <button class="btn-registro"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfNQbxtiHmmE1u4V5_qzJUjxzyE4VC67aoz8IjQKSmnv55f4g/viewform" target="_blank">REGISTRO</a></button>
+        </header>
+
+        <section id="hero" class="hero">
+            <div class="imagen-animada-fondo"></div>
+            
+        </section>
+
+        <section id="objetivos" class="section">
+        <h2>OBJETIVOS ESTRATÉGICOS</h2>
+        <div class="grid-objetivos">
+            <!-- Ejemplo de tarjeta con imagen -->
+            <div class="card">
+                <img src="images/adidas.jpeg" alt="Producto Adidas">
+                <h3>POSICIONAMIENTO</h3>
+                <p>Reforzar el liderazgo e innovación mediante esta experiencia.</p>
+            </div>
+            <div class="card">
+                <img src="images/ropa1.jpeg" alt="Producto Adidas">
+                <h3>PRODUCTO</h3>
+                <p>Presentar las líneas oficiales: jerseys, balones, gorras.</p>
+            </div>
+            <div class="card">
+                <img src="images/mx.jpeg" alt="Producto Adidas">
+                <h3>INTERACCIÓN</h3>
+                <p>Crear experiencias dinámicas para probar nuestros productos.</p>
+            </div>
+        </div>
+    </section>
+
+        <section id="comites" class="section">
+    <h2>COMITÉS ORGANIZADORES</h2>
+    <div class="comites-grid">
+        <div class="comite-card">
+            <h3>COMITÉ DE PROGRAMA</h3>
+            <p><strong>Responsable:</strong> René Emmanuel Rivas Chavero</p>
+            <ul>
+                <li>Diseñar la narrativa temática y estructura general.</li>
+                <li>Definir la agenda oficial y secuencia de actividades.</li>
+                <li>Asegurar coherencia con objetivos de Adidas.</li>
+                <li>Supervisar conferencias, paneles y dinámicas.</li>
+            </ul>
+        </div>
+
+        <div class="comite-card">
+            <h3>COMITÉ DE LOGÍSTICA</h3>
+            <p><strong>Responsable:</strong> Enrique Victorio Angeles</p>
+            <ul>
+                <li>Gestión de sede y relación con el recinto.</li>
+                <li>Coordinar montaje, desmontaje y ambientación.</li>
+                <li>Supervisar aspectos técnicos (audio, video, iluminación).</li>
+                <li>Garantizar flujos operativos y de participantes.</li>
+            </ul>
+        </div>
+
+        <div class="comite-card">
+            <h3>COMITÉ DE FINANZAS Y PATROCINIOS</h3>
+            <p><strong>Responsable:</strong> Samantha Horta Trejo</p>
+            <ul>
+                <li>Administrar presupuesto, ingresos y egresos.</li>
+                <li>Reportes financieros y rentabilidad.</li>
+                <li>Gestionar alianzas y acuerdos comerciales.</li>
+                <li>Presencia de marca y valor compartido.</li>
+            </ul>
+        </div>
+
+        <div class="comite-card">
+            <h3>COMITÉ DE MARKETING Y COMUNICACIÓN</h3>
+            <p><strong>Responsable:</strong> Alexis Clark Melchor Guzmán</p>
+            <ul>
+                <li>Estrategia de comunicación integral.</li>
+                <li>Gestión de redes sociales e identidad visual.</li>
+                <li>Relaciones públicas y cobertura mediática.</li>
+                <li>Incentivar la participación digital.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+            <section id="hotel" class="section">
+        <h2>SEDE: HOTEL FIESTA INN AEROPUERTO</h2>
+        <div class="mapa-contenedor">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120399.18428470104!2d-99.24110570273439!3d19.4350981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1c770bd133%3A0x58d31eab37bf6ce1!2sFiesta%20Inn%20Ciudad%20de%20M%C3%A9xico%20Aeropuerto!5e0!3m2!1sen!2smx!4v1780421088326!5m2!1sen!2smx" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <section id="programa" class="section">
+        <h2>ITINERARIO DE ACTIVIDADES</h2>
+        <p>Consulta el detalle día a día de nuestra World Cup Experience 2027.</p>
+        <br>
+        <button id="btn-abrir-programa" class="btn-registro">VER PROGRAMA COMPLETO</button>
+    </section>
+
+    <div id="modal-programa" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>PROGRAMA OFICIAL</h2>
+            
+            <div class="tabs">
+                <button class="tablink" onclick="abrirDia(event, 'Dia1')">DÍA 1</button>
+                <button class="tablink" onclick="abrirDia(event, 'Dia2')">DÍA 2</button>
+                <button class="tablink" onclick="abrirDia(event, 'Dia3')">DÍA 3</button>
+                <button class="tablink" onclick="abrirDia(event, 'Dia4')">DÍA 4</button> </div>
+            </div>
+
+            <div id="Dia1" class="tabcontent" style="display:block;">
+        <h3>APERTURA DE CONVENCIÓN</h3>
+        <p>
+            <strong>08:00 -</strong> Desayuno de bienvenida.<br>
+            <strong>09:00 -</strong> Registro de participantes y entrega de kits.<br>
+            <strong>10:00 -</strong> Inauguración y objetivos Adidas.<br>
+            <strong>10:30 -</strong> Conferencia: Innovación Deportiva.<br>
+            <strong>11:30 -</strong> Coffee Break.<br>
+            <strong>12:00 -</strong> Presentación Oficial de Productos Mundialistas.<br>
+            <strong>13:30 -</strong> Comida.<br>
+            <strong>15:00 -</strong> Actividades Interactivas (Prueba de productos).<br>
+            <strong>17:00 -</strong> Reto Mundialista Adidas.<br>
+            <strong>18:30 -</strong> Cierre de actividades.<br>
+            <strong>19:00 -</strong> Cena de integración.
+        </p>
+    </div>
+
+    <div id="Dia2" class="tabcontent">
+        <h3>CULTURA Y TRADICIÓN</h3>
+        <p>
+            <strong>08:00 -</strong> Desayuno tipo buffet.<br>
+            <strong>09:00 -</strong> Activación Deportiva Guiada.<br>
+            <strong>10:00 -</strong> Panel: Estrategia Comercial Mundialista.<br>
+            <strong>11:30 -</strong> Break para asistentes.<br>
+            <strong>12:00 -</strong> Dinámica: Diseña tu Jersey.<br>
+            <strong>13:00 -</strong> Dinámica: Estrategia de Venta Express.<br>
+            <strong>14:00 -</strong> Comida.<br>
+            <strong>15:30 -</strong> Experiencia Inmersiva: Adidas & FIFA World Cup.<br>
+            <strong>17:30 -</strong> Sesión de Networking.<br>
+            <strong>18:30 -</strong> Cierre del segundo día.<br>
+            <strong>19:00 -</strong> Cena temática mundialista.
+        </p>
+    </div>
+
+    <div id="Dia3" class="tabcontent">
+        <h3>EXPERIENCIA PREMIUM Y LIDERAZGO</h3>
+        <p>
+            <strong>08:00 -</strong> Desayuno tipo buffet.<br>
+            <strong>09:00 -</strong> Activación Física.<br>
+            <strong>10:00 -</strong> Conferencia: Liderazgo Deportivo.<br>
+            <strong>11:30 -</strong> Break para asistentes.<br>
+            <strong>12:00 -</strong> Dinámica: Experiencia Fan 360°.<br>
+            <strong>13:00 -</strong> Dinámica: Liderazgo en la cancha.<br>
+            <strong>14:00 -</strong> Receso para alimentos.<br>
+            <strong>15:30 -</strong> Activaciones Digitales para Redes Sociales.<br>
+            <strong>17:00 -</strong> Competencias Deportivas Amistosas.<br>
+            <strong>18:30 -</strong> Cierre del tercer día.<br>
+            <strong>19:00 -</strong> Cena.
+        </p>
+    </div>
+
+    <div id="Dia4" class="tabcontent">
+        <h3>CLAUSURA DE LA CONVENCIÓN</h3>
+        <p>
+            <strong>08:00 -</strong> Desayuno de despedida.<br>
+            <strong>09:00 -</strong> Activación y Recuperación Física.<br>
+            <strong>10:00 -</strong> Dinámica: El Fan Ideal de Adidas.<br>
+            <strong>11:30 -</strong> Break para asistentes.<br>
+            <strong>12:00 -</strong> Sesión de Evaluación y Retroalimentación.<br>
+            <strong>13:30 -</strong> Clausura Oficial y Ceremonia de Premiación.<br>
+            <strong>15:00 -</strong> Finalización formal del evento.
+        </p>
+    </div>
+        </div>
+    </div>
+
+    <section id="galeria-hotel" class="section">
+        <h2>INSTALACIONES DEL HOTEL</h2>
+        <div class="carrusel-contenedor">
+            <button class="nav-btn prev" onclick="mover(-1)">&#10094;</button>
+            <div class="carrusel-track" id="track">
+                <div class="foto-item"><img src="images/vista.jpeg" alt="Fachada"></div>
+                <div class="foto-item"><img src="images/Habitacion1.jpeg" alt="Habitación"></div>
+                <div class="foto-item"><img src="images/Habitacion2.jpeg" alt="Negocios"></div>
+                <div class="foto-item"><img src="images/restaurante1.jpeg" alt="Restaurante"></div>
+                <div class="foto-item"><img src="images/restaurante2.jpeg" alt="Restaurante"></div>
+                <div class="foto-item"><img src="images/salon1.jpeg" alt="Restaurante"></div>
+                <div class="foto-item"><img src="images/salon2.jpeg" alt="Restaurante"></div>
+                <div class="foto-item"><img src="images/terrza.jpeg" alt="Restaurante"></div>
+            </div>
+            <button class="nav-btn next" onclick="mover(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="patrocinadores" class="section-patrocinadores">
+    <h2>NUESTROS PATROCINADORES</h2>
+    <div class="patrocinadores-grid">
+        <div class="logo-patrocinador"><img src="images/ado.jpeg" alt="Patrocinador 1"></div>
+        <div class="logo-patrocinador"><img src="images/didi.jpeg" alt="Patrocinador 2"></div>
+        <div class="logo-patrocinador"><img src="images/gatorade.jpeg" alt="Patrocinador 3"></div>
+        <div class="logo-patrocinador"><img src="images/kellogs.jpeg" alt="Patrocinador 4"></div>
+        <div class="logo-patrocinador"><img src="images/garmin.jpeg" alt="Patrocinador 4"></div>
+        <div class="logo-patrocinador"><img src="images/naturw.jpeg" alt="Patrocinador 4"></div>
+        <div class="logo-patrocinador"><img src="images/didi.jpeg" alt="Patrocinador 4"></div>
+        <div class="logo-patrocinador"><img src="images/samsung.jpeg" alt="Patrocinador 4"></div>
+        <div class="logo-patrocinador"><img src="images/uber.jpeg" alt="Patrocinador 4"></div>
+    </div>
+</section>  
+
+<section id="contacto" class="seccion-contacto">
+    <div class="contenedor-contacto">
+        <h2>CONTACTO</h2>
+        <div class="info-grid">
+            <div class="item-contacto">
+                <span class="etiqueta">ORGANIZADOR</span>
+                <p>René Emmanuel Rivas Chavero</p>
+            </div>
+            <div class="item-contacto">
+    <span class="etiqueta">CORREO</span>
+    <a href="mailto:contacto@adidasworldcupexp.com" style="text-decoration: none; color: white;">
+        <p>contacto@adidasworldcupexp.com</p>
+    </a>
+</div>
+          <div class="item-contacto">
+    <span class="etiqueta">TELÉFONO</span>
+    <a href="https://wa.me/525560410824?text=Hola, me interesa información sobre la Adidas World Cup Experience 2027" 
+       target="_blank" style="text-decoration: none; color: white;">
+       <p>+52 55 6041 0824</p>
+    </a>
+</div>
+</section>
+        <script src="index.js"></script>
+        
+    </body>
+    </html>

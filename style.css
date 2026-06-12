@@ -1,0 +1,394 @@
+:root {
+    --fondo: #000;
+    --texto: #fff;
+    --texto-secundario: #999;
+    --dorado: #E2B75A;
+    --gris-oscuro: #0d0d0d;
+    --espaciado: 100px 5%;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    background: var(--fondo); 
+    color: var(--texto); 
+    line-height: 1.6; 
+}
+
+h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; }
+
+.hero {
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-animada-fondo {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/banneer.jpeg');
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    background-size: cover; /* CLAVE: La imagen se expande para llenar todo */
+    background-attachment: fixed; /* Opcional: efecto parallax suave */
+}
+
+/* Ajuste para que la navbar sea transparente sobre la imagen si lo deseas */
+.navbar {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+}
+  
+.navbar { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px 5%; background: var(--fondo); 
+    border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 1000; 
+}
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: var(--texto); text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+
+.btn-registro { background: var(--dorado); border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+.btn-registro a { color: #000; text-decoration: none; }
+
+.section { padding: var(--espaciado); border-bottom: 1px solid #1a1a1a; }
+
+.card img {
+    width: 100%; height: 180px; object-fit: cover; margin-bottom: 20px;
+    border-radius: 4px; filter: grayscale(20%) brightness(0.9); transition: 0.4s ease;
+}
+
+.card:hover img { filter: grayscale(0%) brightness(1); transform: scale(1.02); }
+
+.card h3 { margin-bottom: 10px; color: var(--dorado); }
+
+.card, .comite-card { 
+    background: var(--gris-oscuro); border: 1px solid #222; 
+    padding: 40px; transition: 0.3s; 
+}
+
+.card:hover { border-color: var(--dorado); }
+
+.grid-objetivos, .comites-grid { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px; margin-top: 50px; 
+}
+
+.hero { height: 100vh; position: relative; display: flex; justify-content: center; align-items: center; }
+
+.imagen-animada-fondo { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/banneer.jpeg'); 
+    background-size: cover; background-position: center; z-index: -1; 
+}
+
+h2 { margin-bottom: 50px; color: var(--dorado); }
+
+p { color: var(--texto-secundario); max-width: 800px; }
+
+#comites { position: relative; }
+
+.fondo-comites { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/adidas.jpeg'); 
+    background-size: cover; background-position: center; z-index: -1; 
+}
+
+.comite-card { border-left: 3px solid var(--dorado); }
+
+.mapa-contenedor { margin-top: 40px; border: 3px solid var(--dorado); overflow: hidden; padding: 5px; background: #000; }
+
+.mapa-contenedor iframe { display: block; filter: grayscale(1) invert(1) contrast(0.9); }
+
+.carrusel-contenedor { position: relative; width: 100%; max-width: 800px; margin: 40px auto; overflow: hidden; }
+
+.carrusel-track { display: flex; transition: transform 0.5s ease-in-out; }
+
+.foto-item { min-width: 100%; cursor: pointer; } 
+
+.foto-item img { width: 100%; height: 400px; object-fit: cover; display: block; }
+
+.modal { 
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.95); z-index: 2000; overflow-y: auto;
+}
+
+.modal-lightbox {
+    display: none; position: fixed; z-index: 3000; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+    justify-content: center; align-items: center;
+}
+
+.modal-contenido-img { max-width: 80%; max-height: 80%; border: 2px solid var(--dorado); }
+
+.cerrar-lightbox { position: absolute; top: 20px; right: 30px; font-size: 40px; color: var(--dorado); cursor: pointer; }
+
+.cerrar { 
+    position: absolute; top: 20px; right: 20px; font-size: 30px; 
+    cursor: pointer; color: var(--dorado); 
+}
+
+.tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+.tablink { 
+    background: #000; color: #fff; border: 1px solid var(--dorado); 
+    padding: 10px 15px; cursor: pointer; text-transform: uppercase;
+    font-size: 0.8rem; transition: 0.3s;
+}
+
+.tablink:hover { background: var(--dorado); color: #000; }
+
+.tabcontent { display: none; padding: 20px 0; border: none; }
+
+.tabcontent h3 { color: var(--dorado); margin-bottom: 10px; }
+
+.tabcontent p { line-height: 1.8; color: #ccc; font-size: 0.95rem; }
+
+.nav-btn { 
+    position: absolute; top: 50%; transform: translateY(-50%); 
+    background: var(--dorado); border: none; padding: 15px; cursor: pointer; z-index: 10;
+}
+
+.prev { left: 0; }
+
+.next { right: 0; }
+
+.section-patrocinadores {
+    padding: 60px 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.patrocinadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.logo-patrocinador img {
+    width: 100%;
+    max-width: 180px; /* Tamaño máximo para que no se vean gigantes */
+    height: auto;
+    filter: grayscale(100%); /* Efecto elegante */
+    transition: 0.3s;
+}
+
+.logo-patrocinador img:hover {
+    filter: grayscale(0%); /* Se vuelve a color al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .patrocinadores-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root { --espaciado: 60px 5%; }
+    .nav-links { gap: 15px; }
+    h1 { font-size: 2rem; }
+}
+
+/* Móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 20px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; }
+    
+    .grid-objetivos, .comites-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .modal-contenido { width: 95%; margin: 20% auto; padding: 20px; }
+    
+    .tabs { flex-direction: column; }
+    
+    .foto-item img { height: 250px; }
+    
+    .section { padding: 40px 5%; }
+}
+
+.tabs { 
+    display: flex; 
+    flex-wrap: wrap; /* Esto permite que el 4to botón baje de línea si no cabe */
+    gap: 5px; 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #333; 
+    padding-bottom: 10px; 
+}
+/* Estilo uniforme para los párrafos dentro de los días */
+.tabcontent {
+    display: none;
+    padding: 30px; /* Espacio interno para que el texto no toque los bordes */
+    text-align: left; /* Alineación limpia */
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro consistente */
+    border: 1px solid var(--dorado); /* Marco sutil */
+    border-radius: 8px; /* Bordes redondeados para suavizar */
+    margin: 10px auto;
+    max-width: 90%; /* Evita que el texto sea demasiado ancho y difícil de leer */
+}
+
+.tabcontent h3 {
+    color: var(--dorado);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--dorado);
+    padding-bottom: 10px;
+}
+
+.tabcontent p {
+    font-size: 1rem;
+    line-height: 1.8; /* Aumenta el interlineado para que respire el texto */
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Ajuste para que los horarios destaquen */
+.tabcontent strong {
+    color: var(--dorado);
+    margin-right: 10px;
+}
+
+.seccion-contacto {
+    background: #000; /* Fondo oscuro elegante */
+    padding: 60px 5%;
+    border-top: 2px solid var(--dorado); /* Línea divisoria */
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    color: var(--dorado);
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.item-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.item-contacto p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Estilos para el efecto al pasar el mouse (Hover) */
+
+.item-contacto a {
+    transition: all 0.4s ease; /* Suaviza el cambio */
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item-contacto a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo muy sutil al pasar el mouse */
+    transform: translateY(-5px); /* El elemento "salta" un poco hacia arriba */
+    cursor: pointer;
+}
+
+/* Efecto especial para el texto del teléfono/correo */
+.item-contacto a:hover p {
+    color: #fff; /* Asegura que resalte */
+    text-shadow: 0 0 10px var(--dorado); /* Efecto de brillo dorado */
+}
+
+/* Opcional: Que la etiqueta cambie de color también */
+.item-contacto a:hover .etiqueta {
+    color: var(--dorado);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .info-grid { gap: 30px; }
+    .item-contacto { width: 100%; }
+}
+
+
+@media (max-width: 600px) {
+    .contacto-contenido ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    .section { padding: 40px 5%; }
+}
+
+/* 2. MÓVILES (Hasta 768px) - Diseño Vertical */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-links { gap: 10px; font-size: 0.75rem; }
+    
+    .grid-objetivos, .comites-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .tabs { flex-direction: column;
+    align-items: center;
+    }
+    .tablink { width: 100%; margin-bottom: 5px; }
+    
+    .hero { height: 60vh; }
+    .hero h1 { font-size: 1.8rem; }
+}
+
+/* 3. TABLETS Y PANTALLAS MEDIANAS (Hasta 1024px) */
+@media (max-width: 1024px) {
+    :root { --espaciado: 60px 5%; }
+    .hero { height: 75vh; }
+}
+
+/* 4. PANTALLAS GRANDES Y ESCRITORIO (Desde 1200px) */
+@media (min-width: 1200px) {
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { font-size: 4rem; }
+}
+
+/* 5. AJUSTE PARA DISPOSITIVOS TÁCTILES (Sin Hover) */
+@media (hover: none) {
+    .card:hover { border-color: #222; }
+    .card:hover img { transform: none; filter: grayscale(20%) brightness(0.9); }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column; /* Apila botones en vertical en móviles */
+        align-items: center;    /* Centra los botones apilados */
+    }
+    .tablink {
+        width: 80%;             /* Los botones ocupan el 80% del ancho */
+        margin-bottom: 5px;
+    }
+}
+
+/* 6. MODO OSCURO / ALTO CONTRASTE (Opcional según sistema) */
+@media (prefers-color-scheme: dark) {
+    /* Aquí podrías definir variables si quisieras soporte nativo */
+}
