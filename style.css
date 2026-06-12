@@ -31,7 +31,7 @@ h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; }
     background-image: url('images/poster.jpeg');
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat;
-    background-size: cover; /* CLAVE: La imagen se expande para llenar todo */
+    background-size: contain; /* CLAVE: La imagen se expande para llenar todo */
     background-attachment: fixed; /* Opcional: efecto parallax suave */
 }
 
